@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { HeavyLoadersSlowComponent } from '@shared/heavy-loaders-slow/heavy-loaders-slow.component';
+import { TitleComponent } from '@shared/title/title.component';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, HeavyLoadersSlowComponent],
+  imports: [CommonModule, HeavyLoadersSlowComponent, TitleComponent],
   templateUrl: './defer-views.component.html',
   styleUrl: './defer-views.component.css',
 })
