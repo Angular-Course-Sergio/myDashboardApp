@@ -42,16 +42,26 @@ export const routes: Routes = [
         loadComponent: () => import('./dashboard/pages/users/users.component'),
       },
       {
+        path: 'input-output',
+        title: 'Input/Output',
+        loadComponent: () =>
+          import('./dashboard/pages/input-output/input-output.component'),
+      },
+      {
         path: 'view-transition-1',
         title: 'View Transition 1',
         loadComponent: () =>
-          import('./dashboard/pages/view-transition/view-transition1.component'),
+          import(
+            './dashboard/pages/view-transition/view-transition1.component'
+          ),
       },
       {
         path: 'view-transition-2',
         title: 'View Transition 2',
         loadComponent: () =>
-          import('./dashboard/pages/view-transition/view-transition2.component'),
+          import(
+            './dashboard/pages/view-transition/view-transition2.component'
+          ),
       },
       {
         path: '',
