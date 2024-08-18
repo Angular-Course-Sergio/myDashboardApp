@@ -7,6 +7,11 @@ export interface ReqResponse {
   support:     Support;
 }
 
+export interface UserResponse {
+  data: User;
+  suppor: Support;
+}
+
 export interface User {
   id:         number;
   email:      string;
