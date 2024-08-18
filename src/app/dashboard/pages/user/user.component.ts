@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute } from '@angular/router';
-import { User } from '@interfaces/req-response.interface';
 import { UsersService } from '@services/users.service';
 import { TitleComponent } from '@shared/title/title.component';
 import { switchMap } from 'rxjs';
@@ -22,4 +21,10 @@ export default class UserComponent {
       switchMap(({ id }) => this.userService.getUserById(id))
     )
   );
+
+  public titleLabel = computed(() => {
+    return this.user() != undefined
+      ? `${this.user()?.first_name} ${this.user()?.last_name}`
+      : 'Información del usuario';
+  });
 }
